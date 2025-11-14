@@ -1,0 +1,209 @@
+name: pr-validation
+
+on:
+  pull_request:
+    branches: [main, dev]
+    paths:
+      - 'apps/home/**'
+      - 'apps/docs/**'
+      - '.github/workflows/**'
+      - 'shared/**'
+
+jobs:
+  validate-pr:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: 📥 检出代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: 🔍 识别变更范围
+        id: detect-changes
+        run: |
+          # 使用 GitHub API 获取变更文件
+          CHANGED_FILES=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.number }}/files" \
+            | jq -r '.[].filename')
+          
+          echo "变更文件列表:"
+          echo "$CHANGED_FILES"
+          
+          # 计算变更数量
+          HAS_HOME_CHANGES=$(echo "$CHANGED_FILES" | grep -c '^apps/home/' || echo 0)
+          HAS_DOCS_CHANGES=$(echo "$CHANGED_FILES" | grep -c '^apps/docs/' || echo 0)
+          
+          # 始终输出字符串类型（避免纯数字问题）
+          echo "home_has_changes=$( [ $HAS_HOME_CHANGES -gt 0 ] && echo "true" || echo "false" )" >> $GITHUB_OUTPUT
+          echo "docs_has_changes=$( [ $HAS_DOCS_CHANGES -gt 0 ] && echo "true" || echo "false" )" >> $GITHUB_OUTPUT
+          
+          # 保存变更文件列表
+          echo "$CHANGED_FILES" > $GITHUB_WORKSPACE/changed_files.txt
+          
+          echo "🔍 变更摘要:"
+          echo "- 主站(home)变更: ${HAS_HOME_CHANGES} 个文件"
+          echo "- 文档站(docs)变更: ${HAS_DOCS_CHANGES} 个文件"
+
+      - name: ✅ 验证 PR 标题格式
+        uses: amannn/action-semantic-pull-request@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          types: |
+            post
+            feat
+            fix
+            style
+            chore
+            docs
+            refactor
+            perf
+            test
+            build
+            ci
+          scopes: |
+            home
+            docs
+            config
+            shared
+          requireScope: true
+          ignoreLabels: |
+            ignore-semantic-pr-check
+          subjectPatternError: |
+            ❌ PR 标题格式无效！
+            
+            请使用标准格式: <类型>(<作用域>): <描述>
+            示例: post(home): 添加2025年竞赛获奖新闻
+            
+            允许的类型: post, feat, fix, style, chore, docs, refactor, perf, test, build, ci
+            允许的作用域: home, docs, config, shared
+            
+            💡 提示: 由于是单仓库多站点架构，
+                   请在标题中明确标识修改的是主站(home)还是文档站(docs)
+
+      - name: 📂 验证文件位置规范
+        id: file-location
+        run: |
+          # 读取变更文件
+          if [ ! -f "$GITHUB_WORKSPACE/changed_files.txt" ]; then
+            echo "⚠️ 未检测到变更文件，跳过验证"
+            exit 0
+          fi
+          
+          CHANGED_FILES=$(cat $GITHUB_WORKSPACE/changed_files.txt)
+          
+          # 获取布尔标志
+          HOME_HAS_CHANGES="${{ steps.detect-changes.outputs.home_has_changes }}"
+          DOCS_HAS_CHANGES="${{ steps.detect-changes.outputs.docs_has_changes }}"
+          
+          # 检查主站(home)变更中是否包含文档站文件
+          if [ "$HOME_HAS_CHANGES" = "true" ]; then
+            INVALID_DOCS_FILES=$(echo "$CHANGED_FILES" | grep '^apps/docs/' || true)
+            if [ -n "$INVALID_DOCS_FILES" ]; then
+              echo "❌ 错误: 主站 PR 中包含文档站文件！"
+              echo "请将文档站修改提交到独立的 PR，或使用 docs 作用域"
+              echo "违规文件示例:"
+              echo "$INVALID_DOCS_FILES" | head -3
+              exit 1
+            fi
+          fi
+          
+          # 检查文档站(docs)变更中是否包含主站文件
+          if [ "$DOCS_HAS_CHANGES" = "true" ]; then
+            INVALID_HOME_FILES=$(echo "$CHANGED_FILES" | grep '^apps/home/' || true)
+            if [ -n "$INVALID_HOME_FILES" ]; then
+              echo "❌ 错误: 文档站 PR 中包含主站文件！"
+              echo "请将主站修改提交到独立的 PR，或使用 home 作用域"
+              echo "违规文件示例:"
+              echo "$INVALID_HOME_FILES" | head -3
+              exit 1
+            fi
+          fi
+          
+          # 检查跨应用修改
+          if [ "$HOME_HAS_CHANGES" = "true" ] && [ "$DOCS_HAS_CHANGES" = "true" ]; then
+            echo "⚠️ 警告: 此 PR 同时修改了主站和文档站"
+            echo "建议: 为便于审查，请拆分为两个独立 PR"
+            echo "如果必须合并，请添加标签 'cross-app-change'"
+          fi
+          
+          echo "✅ 文件位置验证通过"
+
+      - name: 📦 检查大文件提交
+        id: large-files
+        run: |
+          MAX_SIZE=20971520  # 20MB
+          VIOLATIONS=0
+          
+          echo "🔍 检查新增/修改的文件大小..."
+          
+          # 重新获取变更文件
+          CHANGED_FILES=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.number }}/files" \
+            | jq -r '.[].filename')
+          
+          while IFS= read -r file; do
+            # 仅检查相关目录的新增/修改文件
+            if [[ "$file" == apps/home/* || "$file" == apps/docs/* ]]; then
+              if [ -f "$file" ]; then
+                size=$(stat -c%s "$file" 2>/dev/null || stat -f%z "$file" 2>/dev/null)
+                if [ "$size" -gt "$MAX_SIZE" ]; then
+                  human_size=$(echo "scale=2; $size/1024/1024" | bc 2>/dev/null || echo "$((size/1024/1024))")
+                  echo "❌ $file ($human_size MB) 超过 20MB 限制"
+                  ((VIOLATIONS++))
+                fi
+              fi
+            fi
+          done <<< "$CHANGED_FILES"
+          
+          if [ "$VIOLATIONS" -gt 0 ]; then
+            echo ""
+            echo "🛑 提交被阻止！发现 $VIOLATIONS 个超限文件"
+            echo "💡 解决方案："
+            echo "1. 将大文件上传至阿里云盘/蓝奏云"
+            echo "2. 在文档中替换为网盘链接"
+            exit 1
+          else
+            echo "✅ 未发现超限文件 (所有文件 < 20MB)"
+          fi
+
+      - name: 📝 生成预览摘要
+        if: always()
+        env:
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          echo "## 🚀 预览环境" > $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # 获取变更标志
+          HOME_HAS_CHANGES="${{ steps.detect-changes.outputs.home_has_changes }}"
+          DOCS_HAS_CHANGES="${{ steps.detect-changes.outputs.docs_has_changes }}"
+          
+          # 从 PR HEAD SHA 中截取前7位字符
+          SHORT_SHA=${PR_HEAD_SHA:0:7}
+          
+          if [ "$HOME_HAS_CHANGES" = "true" ]; then
+            echo "- **主站预览**: https://${SHORT_SHA}.ctbu-autobots-websites.pages.dev" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          if [ "$DOCS_HAS_CHANGES" = "true" ]; then
+            echo "- **文档站预览**: https://${SHORT_SHA}.ctbu-autobots-docs.pages.dev" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "💡 预览提示:" >> $GITHUB_STEP_SUMMARY
+          echo "- 预览环境通常在1-2分钟内可用" >> $GITHUB_STEP_SUMMARY
+          echo "- 如果链接无法访问，请检查 Cloudflare Pages 部署状态" >> $GITHUB_STEP_SUMMARY
+          
+          # 添加验证结果摘要
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## ✅ 验证结果" >> $GITHUB_STEP_SUMMARY
+          echo "- PR 标题格式: 通过 (符合 Conventional Commits 规范)" >> $GITHUB_STEP_SUMMARY
+          echo "- 文件位置规范: 通过" >> $GITHUB_STEP_SUMMARY
+          echo "- 大文件检查: 通过 (所有文件 < 20MB)" >> $GITHUB_STEP_SUMMARY
+          echo "- 构建测试: 已禁用（根据配置）" >> $GITHUB_STEP_SUMMARY

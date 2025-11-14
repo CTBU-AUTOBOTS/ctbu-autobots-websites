@@ -1,0 +1,10 @@
+{
+	"title": "宣传照片",
+	"hidden": false,
+	"description": "汽车人协会宣传照片",
+	"date": "2025-08-01",
+	"location": "重庆市",
+	"tags": ["宣传", "活动", "照片"],
+	"layout": "masonry",
+	"columns": 3
+}
