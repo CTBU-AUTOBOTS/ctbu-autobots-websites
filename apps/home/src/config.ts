@@ -296,8 +296,8 @@ export const navBarConfig: NavBarConfig = {
 			external: true,
 		},
 		{
-			name: "资源站",
-			url: "https://cloud.lwrzgocloud.top/",
+			name: "资料库",
+			url: "https://cloud.autobot5.site/",
 			icon: "material-symbols:cloud",
 			external: true,
 		},
@@ -576,9 +576,9 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 
 	// 侧栏组件布局配置
 	components: {
-		left: ["profile", "announcement", "categories"],
-		right: ["site-stats", "calendar"],
-		drawer: ["profile", "announcement", "categories"],
+		left: ["site-stats", "calendar","announcement", "categories"],
+		right: [],
+		drawer: ["announcement", "categories"],
 	},
 
 	// 默认动画配置

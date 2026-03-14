@@ -2,24 +2,21 @@
 title: 【新闻转载】恭喜我院汽车人协会荣获「校长荣誉奖」团队奖项
 description: 重庆工商大学机械工程学院汽车人协会凭借在学科竞赛、科技创新、人才培养与社会实践等方面的突出表现，荣获第九届“校长荣誉奖”团队奖项。
 published: 2024-12-17
-pubDate: 2024-12-17
-date: 2024-12-17
 draft: false
 tags: [转载, 校长荣誉奖, 汽车人协会, 学科竞赛, 科技创新, 机械工程学院, CTBU]
 category: 新闻转载
 pinned: true
 author: 转载
-licenseName: "Unlicensed"
+licenseName: "All Rights Reserved"
 sourceLink: "https://mp.weixin.qq.com/s/C4DRjGQsT6w6ODKp_gQJ0Q"
-image: "https://lwrzgophoto.oss-cn-guangzhou.aliyuncs.com/%E5%9B%BE%E5%BA%8Aimg/e534d57feb1045b7b23b2d4ad6be8fc3-1761761219808.webp"
-
+image: "./e534d57feb1045b7b23b2d4ad6be8fc3-1761761219808.webp"
 ---
 
 # 【新闻转载】恭喜我院汽车人协会荣获「校长荣誉奖」团队奖项
 
 12月10日晚19:00，重庆工商大学第九届“校长荣誉奖”颁奖典礼在学校剧场隆重举行。
 
-
+![img](./e534d57feb1045b7b23b2d4ad6be8fc3-1761761219808.webp)
 
 群英闪耀，灿若繁星。让我们一起见证机械学子们的精彩时刻。
 

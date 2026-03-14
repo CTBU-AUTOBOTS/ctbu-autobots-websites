@@ -13,5 +13,5 @@ export default defineNavbarConfig([
     items: [{ text: 'ROS教学大纲', link: '/ros/' }]
   },
   { text: '协会主页', link: 'https://www.autobot5.site' },
-  { text: '协会资源站', link: 'https://cloud.autobot5.site' },
+  { text: '协会资料库', link: 'https://cloud.autobot5.site' },
 ])

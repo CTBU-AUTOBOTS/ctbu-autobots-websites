@@ -12,7 +12,7 @@
   部署地址：https://www.autobot5.site
 - **文档站**：基于 VuePress + Theme Plume，提供开发规范、教程与项目说明  
   部署地址：https://docs.autobot5.site
-- **资源站**：通过 OpenList 整合第三方网盘（如蓝奏云、阿里云盘）提供资料下载  
+- **资料库**：通过 OpenList 整合第三方网盘（如蓝奏云、阿里云盘）提供资料下载  
   部署地址：https://cloud.autobot5.site
 
 本仓库即为网站源码，所有内容均以 Markdown 编写，欢迎参与共建！

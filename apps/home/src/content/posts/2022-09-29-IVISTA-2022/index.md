@@ -2,16 +2,14 @@
 title: 【新闻转载】我校在IVISTA智能网联汽车挑战赛上获得一等奖
 description: 重庆工商大学机械工程学院汽车人协会“五公里车队”在2022年IVISTA智能网联汽车挑战赛“山城极限挑战赛”中荣获一等奖，展现了学校在智能网联汽车领域的技术实力与育人成效。
 published: 2022-09-29
-pubDate: 2022-09-29
-date: 2022-09-29
 draft: false
 tags: [转载, IVISTA, 智能网联汽车, 五公里车队, 汽车人协会, 一等奖, 学科竞赛, 机械工程学院, CTBU]
 category: 新闻转载
 pinned: false
 author: 转载
-licenseName: "Unlicensed"
+licenseName: "All Rights Reserved"
 sourceLink: "https://mp.weixin.qq.com/s/-U5DfitzaweX2WFoTXcxYA"
-image: "https://lwrzgophoto.oss-cn-guangzhou.aliyuncs.com/%E5%9B%BE%E5%BA%8Aimg/c87a991d7c374d909b54f891500adcce-1761761788804.webp"
+image: "./p1.webp"
 
 ---
 
@@ -21,6 +19,8 @@ image: "https://lwrzgophoto.oss-cn-guangzhou.aliyuncs.com/%E5%9B%BE%E5%BA%8Aimg/
 
 由我校机械工程学院杨智宇博士和张建恒老师指导的汽车人协会的陈思思同学、吴宇洁同学、何倩同学、朱洪洋同学、宋子扬同学共同组成“五公里车队”参加了极具重庆特色、被誉为魔鬼赛道、全长4.3公里的“山城极限挑战赛”，央视频对比赛进行了全程直播。
 
-![img](https://lwrzgophoto.oss-cn-guangzhou.aliyuncs.com/%E5%9B%BE%E5%BA%8Aimg/c87a991d7c374d909b54f891500adcce-1761761788804.webp)通过本次比赛，扩大了我校在汽车行业的知名度和影响力，实现了以赛促教、以赛促学。
+![img](./p1.webp)
 
-![img](https://lwrzgophoto.oss-cn-guangzhou.aliyuncs.com/%E5%9B%BE%E5%BA%8Aimg/0b2151a857a24b6bb39ba8c821168de1-1761761788746.webp)
+通过本次比赛，扩大了我校在汽车行业的知名度和影响力，实现了以赛促教、以赛促学。
+
+![img](./p2.webp)

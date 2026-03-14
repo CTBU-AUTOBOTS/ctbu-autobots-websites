@@ -13,7 +13,7 @@
 | ---------- | ----------- | ------------------------------------------------------------ | ---------------------------------------------------------- | ------------------------------ |
 | **主站**   | `apps/home` | Astro + [Mizuki](https://github.com/matsuzaka-yuki/Mizuki)   | [https://www.autobot5.site](https://www.autobot5.site)     | 协会介绍、新闻、博客、视觉展示 |
 | **文档站** | `apps/docs` | VuePress + [Theme Plume](https://github.com/pengzhanbo/vuepress-theme-plume) | [https://docs.autobot5.site](https://docs.autobot5.site)   | 教程、项目说明                 |
-| **资源站** | 独立项目    | [OpenList](https://github.com/OpenListTeam/OpenList)         | [https://cloud.autobot5.site](https://cloud.autobot5.site) | 资料下载、网盘整合             |
+| **资料库** | 独立项目    | [OpenList](https://github.com/OpenListTeam/OpenList)         | [https://cloud.autobot5.site](https://cloud.autobot5.site) | 资料下载、网盘整合             |
 
 ## 结构与职责
 
@@ -266,19 +266,17 @@
   
   ```markdown
   ---
-  title: 【新闻转载】恭喜我院汽车人协会荣获「校长荣誉奖」团队奖项
-  description: 重庆工商大学机械工程学院汽车人协会凭借在学科竞赛、科技创新、人才培养与社会实践等方面的突出表现，荣获第九届“校长荣誉奖”团队奖项。
-  published: 2024-12-17
-  pubDate: 2024-12-17
-  date: 2024-12-17
-  draft: false
-  tags: [转载, 校长荣誉奖, 汽车人协会, 学科竞赛, 科技创新, 机械工程学院, CTBU]
-  category: 新闻转载
-  pinned: true
-  author: 转载
-  licenseName: "Unlicensed"
-  sourceLink: "https://mp.weixin.qq.com/s/C4DRjGQsT6w6ODKp_gQJ0Q"
-  image: "https://lwrzgophoto.oss-cn-guangzhou.aliyuncs.com/%E5%9B%BE%E5%BA%8Aimg/e534d57feb1045b7b23b2d4ad6be8fc3-1761761219808.webp"
+  title: 【分类写这里】文章标题请填写在这里
+  description: 简要描述文章内容，建议控制在 50-120 字，用于 SEO 和列表页展示
+  published: 2026-04-01          # 格式：YYYY-MM-DD，文章发布日期
+  draft: true                   # true=草稿（不发布），false=正式文章
+  tags: [转载, 标签2, 标签3]     # 文章标签，用于文章分类检索
+  category: 新闻转载             # 固定分类，如：新闻转载/学院动态/通知公告
+  pinned: false                  # true=置顶显示，false=正常排序
+  author: 转载                   # 作者署名，转载文章建议填"转载"或来源单位
+  licenseName: "All Rights Reserved"      # 版权声明：Unlicensed / CC-BY-4.0 等
+  sourceLink: "https://xxx.com"  # 原文链接，转载必填，便于溯源
+  image: "./cover-image.webp"    # 封面图路径，建议放在同目录下
   ---
   ```
 
@@ -316,7 +314,7 @@
 
 ### 2. 图片资源规范
 
-- 优先使用阿里云OSS图床
+- 优先使用项目内部存储，其次是图床
 - 建议使用WebP格式，优化文件大小
 
 ## 部署与预览
@@ -350,12 +348,10 @@ sequenceDiagram
 
 ### 2. 预览环境
 
-- 每个PR会自动创建对应站点的预览链接:
-  - **主站预览**: `https://pr-{number}--autobot-home.pages.dev`
-  - **文档站预览**: `https://pr-{number}--autobot-docs.pages.dev`
+- 每个PR会自动创建对应站点的预览链接
 - 预览链接会在PR评论中**自动提供**
 - 预览环境通常在2-3分钟内可用
-- {number} 为 PR 编号，合并后预览链接自动失效
+- 合并后预览链接自动失效
 
 ## 常见问题解决
 

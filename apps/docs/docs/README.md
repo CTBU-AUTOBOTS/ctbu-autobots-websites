@@ -14,7 +14,7 @@ config:
           text: 协会主页 →
           link: https://www.autobot5.site/
         - theme: alt
-          text: 协会资源站 →
+          text: 协会资料库 →
           link: https://cloud.autobot5.site/
           target: _blank
         - theme: alt
@@ -70,7 +70,7 @@ config:
 3. 提交 **Pull Request**，我们会尽快 Review
 
 > ⚠️ **注意**：请勿上传大于 20MB 的文件（如完整工程包、视频等）。  
-> 大文件请托管至网盘，并在文档中提供链接。后续将统一迁移至协会资源站。
+> 大文件请托管至网盘，并在文档中提供链接。后续将统一迁移至协会资料库。
 
 ## 🔗 相关项目
 

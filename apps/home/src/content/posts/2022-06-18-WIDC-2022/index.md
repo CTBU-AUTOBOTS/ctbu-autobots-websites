@@ -2,16 +2,15 @@
 title: 【新闻转载】我校师生在2022世界智能驾驶挑战赛中获奖
 description: 重庆工商大学机械工程学院“五公里车队”在2022世界智能驾驶挑战赛（WIDC）中荣获智能网联挑战赛银奖，展现了汽车人协会在智能驾驶领域的扎实技术实力与创新能力。
 published: 2022-06-18
-pubDate: 2022-06-18
-date: 2022-06-18
 draft: false
 tags: [转载, 世界智能驾驶挑战赛, WIDC, 五公里车队, 汽车人协会, 智能网联, 学科竞赛, 机械工程学院, CTBU]
 category: 新闻转载
 pinned: false
 author: 转载
-licenseName: "Unlicensed"
+licenseName: "All Rights Reserved"
 sourceLink: "https://mp.weixin.qq.com/s/yKN3WEE1kkojId4pzCOlFw"
-image: "https://lwrzgophoto.oss-cn-guangzhou.aliyuncs.com/%E5%9B%BE%E5%BA%8Aimg/68f70a8c4c7942068224e486af9e9be0-1761762411333.webp"
+image: "./p2.webp"
+
 
 ---
 
@@ -21,6 +20,6 @@ image: "https://lwrzgophoto.oss-cn-guangzhou.aliyuncs.com/%E5%9B%BE%E5%BA%8Aimg/
 
 我校机械工程学院推报的“五公里车队”获得智能网联挑战赛银奖。“五公里车队”由杨智宇博士担任指导教师、张建恒老师担任领队，机械工程学院汽车人协会3名研究生和5名本科生共同组成。经过半年的刻苦理论学习与系统工程实践，团队陆续克服了硬件集成、软件编程、车辆调试等一系列难题，获得了好成绩。
 
-![img](https://lwrzgophoto.oss-cn-guangzhou.aliyuncs.com/%E5%9B%BE%E5%BA%8Aimg/6f11e1503bca41fda0f94cf92cc0ab2e-1761762410376.webp)
+![img](./p1.webp)
 
-![img](https://lwrzgophoto.oss-cn-guangzhou.aliyuncs.com/%E5%9B%BE%E5%BA%8Aimg/68f70a8c4c7942068224e486af9e9be0-1761762411333.webp)
+![img](./p2.webp)
