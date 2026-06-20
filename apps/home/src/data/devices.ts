@@ -16,6 +16,15 @@ export type DeviceCategory = {
 };
 
 export const devicesData: DeviceCategory = {
+	// 第X届·会长团: [
+	// 	{
+	// 		name: "姓名",
+	// 		image: "/images/device/default.png",
+	// 		specs: "职位",
+	// 		description: "描述",
+	// 		link: "",
+	// 	},
+	// ],
 	第九届·会长团: [
 		{
 			name: "张威老师",
@@ -241,15 +250,6 @@ export const devicesData: DeviceCategory = {
 			image: "/images/device/default.png",
 			specs: "会长",
 			description: "这是一句简介",
-			link: "",
-		},
-	],
-	第X届·会长团: [
-		{
-			name: "姓名",
-			image: "/images/device/default.png",
-			specs: "职位",
-			description: "描述",
 			link: "",
 		},
 	],
