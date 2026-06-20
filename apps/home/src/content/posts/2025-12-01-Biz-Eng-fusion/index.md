@@ -9,7 +9,7 @@ pinned: false
 author: 转载
 licenseName: "All Rights Reserved"
 sourceLink: "https://impe2014.ctbu.edu.cn/info/1049/11504.htm"  # 请替换为真实的原文链接
-image: "./image1.jpeg"         # 已自动匹配正文第一张图片作为封面
+image: "./6DCFE962BE60C1CE307CB7524DF_A9F471C7_24F88.jpeg"         # 已自动匹配正文第一张图片作为封面
 ---
 
 # 【转载】机械工程学院与工商管理学院联合举办“商工融合”创新交流会
