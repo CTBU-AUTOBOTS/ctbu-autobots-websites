@@ -4,7 +4,7 @@ description: 简要描述文章内容，建议控制在 50-120 字，用于 SEO 
 published: 2026-04-01          # 格式：YYYY-MM-DD，文章发布日期
 draft: true                   # true=草稿（不发布），false=正式文章
 tags: [转载, 标签2, 标签3]     # 文章标签，用于文章分类检索
-category: 网站运维             # 固定分类，如：新闻转载/学院动态/通知公告
+category: 网站运维             # 固定分类，如：转载/学院动态/通知公告
 pinned: false                  # true=置顶显示，false=正常排序
 author: 转载                   # 作者署名，转载文章建议填"转载"或来源单位
 licenseName: "All Rights Reserved"      # 版权声明：Unlicensed / CC-BY-4.0 等
