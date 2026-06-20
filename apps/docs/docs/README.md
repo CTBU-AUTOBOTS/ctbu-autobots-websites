@@ -40,10 +40,6 @@ config:
         title: 技术沉淀
         details: 通过文档站点，让经验可积累、可复用、可传承
   - type: custom
-title: 文档目录
-createTime: 2026/03/13 20:48:43
-permalink: /
-foo: foo
 ---
 
 ## 🏆 **2025 年暑期战报**  
