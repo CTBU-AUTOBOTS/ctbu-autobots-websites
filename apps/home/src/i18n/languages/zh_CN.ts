@@ -129,7 +129,7 @@ export const zh_CN: Translation = {
 	[Key.albumsPhotosCount]: "张照片",
 
 	// 设备页面
-	[Key.devices]: "历届干事",
+	[Key.devices]: "历届核心干事",
 	[Key.devicesSubtitle]: "历届协会干事介绍",
 	[Key.devicesViewDetails]: "查看详情",
 
