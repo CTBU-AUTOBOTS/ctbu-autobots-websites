@@ -31,10 +31,10 @@ export default defineUserConfig({
   collections: [
     {
       type: "doc",
-      dir: "ros",
-      title: "ros教学",
+      dir: "articals",
+      title: "文档目录",
       sidebar: 'auto', // 自动生成导航结构
-      sidebarCollapsed: undefined, // 折叠状态：true-折叠 false-展开
+      sidebarCollapsed: false, // 折叠状态：true-折叠 false-展开
       autoFrontmatter: {
         title: true, // 自动生成标题
         createTime: true, // 自动生成创建时间

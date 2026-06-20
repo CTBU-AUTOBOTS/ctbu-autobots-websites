@@ -298,7 +298,7 @@
   ---
   title: ROS 入门第一讲：Robot Operating System
   createTime: 2025/10/31 18:38:11
-  permalink: /ros/a46ckw85/
+  permalink: /articals/a46ckw85/
   foo: foo
   ---
   ```

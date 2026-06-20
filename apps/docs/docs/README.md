@@ -11,17 +11,12 @@ config:
         dark: https://www.autobot5.site/assets/home/home.png
       actions:
         - theme: brand
-          text: 协会主页 →
-          link: https://www.autobot5.site/
-        - theme: alt
-          text: 协会资料库 →
-          link: https://cloud.autobot5.site/
-          target: _blank
+          text: 跳转 · 文档索引
+          link: /articals/
         - theme: alt
           text: GitHub 仓库
           link: https://github.com/CTBU-AUTOBOTS/ctbu-autobots-websites
           target: _blank
-
   - type: features
     title: 我们做什么？
     description: 以智能汽车为核心，构建「技术培训 × 竞赛实战 × 资源共享」三位一体的创新平台
@@ -44,8 +39,11 @@ config:
       - icon: 🌐
         title: 技术沉淀
         details: 通过文档站点，让经验可积累、可复用、可传承
-
   - type: custom
+title: 文档目录
+createTime: 2026/03/13 20:48:43
+permalink: /
+foo: foo
 ---
 
 ## 🏆 **2025 年暑期战报**  

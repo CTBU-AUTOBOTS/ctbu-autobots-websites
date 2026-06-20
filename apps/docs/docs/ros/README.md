@@ -1,7 +1,7 @@
 ---
 title: ROS 教学大纲文档
 createTime: 2025/10/31 17:12:07
-permalink: /ros/
+permalink: /articals/
 foo: foo
 ---
 # ROS 教学大纲
