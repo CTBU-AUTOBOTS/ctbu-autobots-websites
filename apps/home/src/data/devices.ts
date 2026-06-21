@@ -40,6 +40,27 @@ export const devicesData: DeviceCategory = {
 			description: "这是一句简介",
 			link: "",
 		},
+        {
+			name: "唐渝森",
+			image: "/images/device/default.png",
+			specs: "副会长",
+			description: "这是一句简介",
+			link: "",
+		},
+        {
+			name: "冯邦芮",
+			image: "/images/device/default.png",
+			specs: "副会长",
+			description: "这是一句简介",
+			link: "",
+		},
+        {
+			name: "程波",
+			image: "/images/device/default.png",
+			specs: "副会长",
+			description: "这是一句简介",
+			link: "",
+		},
 	],
 	第八届·会长团: [
 		{
