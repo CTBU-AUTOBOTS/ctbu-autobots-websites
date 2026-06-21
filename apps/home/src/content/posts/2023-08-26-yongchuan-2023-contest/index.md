@@ -1,5 +1,5 @@
 ---
-title: 【新闻转载】关注2023智博会 · 智能汽车应用场景挑战赛参赛团队陆续抵达永川
+title: 【转载】关注2023智博会 · 智能汽车应用场景挑战赛参赛团队陆续抵达永川
 description: 重庆工商大学“五公里车队”携自主研发的智能物流车抵达永川，积极备战2023智博会智能汽车应用场景挑战赛。本次赛事以“智联未来•智享生活”为主题，设城市功能赛与高速通行赛，全球首创不封路混行与真实高速公路测试场景，吸引70余支团队报名。
 published: 2023-08-26
 draft: false
@@ -13,7 +13,7 @@ image: "./6bcade726ed545d98e1910ee660a436d-1761762839134.webp"
 
 ---
 
-# 【新闻转载】关注2023智博会 · 智能汽车应用场景挑战赛参赛团队陆续抵达永川
+# 【转载】关注2023智博会 · 智能汽车应用场景挑战赛参赛团队陆续抵达永川
 
 <video controls width="100%" poster="https://lwrzgophoto.oss-cn-guangzhou.aliyuncs.com/%E5%9B%BE%E5%BA%8Aimg/53c0837b2c7e4eafa0c9d6f0a024a0f1-1761762838541.webp">
   <source src="https://lwrzgophoto.oss-cn-guangzhou.aliyuncs.com/%E5%9B%BE%E5%BA%8Aimg/9a1c6bee802742c5a0979a2eb8fffbfe-1761763222894.mp4" type="video/mp4">

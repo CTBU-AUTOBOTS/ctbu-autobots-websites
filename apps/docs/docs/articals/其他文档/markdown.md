@@ -1,7 +1,7 @@
 ---
 title: 测试文档
 createTime: 2025/10/31 16:33:08
-permalink: /ros/cgyk89me/
+permalink: /articals/cgyk89me/
 foo: foo
 ---
 

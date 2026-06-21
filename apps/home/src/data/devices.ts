@@ -16,6 +16,31 @@ export type DeviceCategory = {
 };
 
 export const devicesData: DeviceCategory = {
+	// 第X届·会长团: [
+	// 	{
+	// 		name: "姓名",
+	// 		image: "/images/device/default.png",
+	// 		specs: "职位",
+	// 		description: "描述",
+	// 		link: "",
+	// 	},
+	// ],
+	第九届·会长团: [
+		{
+			name: "张威老师",
+			image: "/images/device/default.png",
+			specs: "指导老师",
+			description: "这是一句简介",
+			link: "",
+		},
+		{
+			name: "周虹池",
+			image: "/images/device/default.png",
+			specs: "会长",
+			description: "这是一句简介",
+			link: "",
+		},
+	],
 	第八届·会长团: [
 		{
 			name: "张威老师",
@@ -28,14 +53,14 @@ export const devicesData: DeviceCategory = {
 			name: "李定邦",
 			image: "/images/device/default.png",
 			specs: "会长",
-			description: "原神",
+			description: "这是一句简介",
 			link: "",
 		},
 		{
 			name: "潘宁",
-			image: "/images/device/default.png",
+			image: "/images/device/panning.jpg",
 			specs: "副会长",
-			description: "这是一句简介",
+			description: "心志要坚，意趣要乐。",
 			link: "",
 		},
 		{
@@ -47,9 +72,16 @@ export const devicesData: DeviceCategory = {
 		},
 		{
 			name: "章俊杰",
-			image: "/images/device/default.png",
+			image: "/images/device/zhangjunjie.jpg",
 			specs: "副会长",
-			description: "这是一句简介",
+			description: "第八届汽车人协会副会长",
+			link: "",
+		},		
+		{
+			name: "李荣桂",
+			image: "/images/device/lironggui.jpg",
+			specs: "车队队长",
+			description: "实践是检验真理的唯一标准",
 			link: "",
 		},
 	],
@@ -77,9 +109,9 @@ export const devicesData: DeviceCategory = {
 		},
 		{
 			name: "赵晓东",
-			image: "/images/device/default.png",
+			image: "/images/device/zhaoxiaodong.jpg",
 			specs: "副会长",
-			description: "这是一句简介",
+			description: "一个连续四年加入汽车人的汽车人老粉丝",
 			link: "",
 		},
 	],
@@ -100,9 +132,9 @@ export const devicesData: DeviceCategory = {
 		},
 		{
 			name: "李涌兴",
-			image: "/images/device/default.png",
+			image: "/images/device/liyongxing.jpg",
 			specs: "副会长",
-			description: "这是一句简介",
+			description: `第四届汽车人协会干事 第五届汽车人协会技术部部长 第六届汽车人协会会长`,
 			link: "",
 		},
 	],
@@ -218,15 +250,6 @@ export const devicesData: DeviceCategory = {
 			image: "/images/device/default.png",
 			specs: "会长",
 			description: "这是一句简介",
-			link: "",
-		},
-	],
-	第X届·会长团: [
-		{
-			name: "姓名",
-			image: "/images/device/default.png",
-			specs: "职位",
-			description: "描述",
 			link: "",
 		},
 	],

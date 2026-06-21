@@ -119,16 +119,26 @@ export const siteConfig: SiteConfig = {
 		// 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播
 		src: {
 			desktop: [
-				"/assets/desktop-banner/d1.webp",
-				"/assets/desktop-banner/d2.webp",
-				"/assets/desktop-banner/d3.webp",
-				"/assets/desktop-banner/d4.webp",
-				"/assets/desktop-banner/d5.webp",
-				"/assets/desktop-banner/d6.webp",
-				"/assets/desktop-banner/d7.webp",
-				"/assets/desktop-banner/d8.webp",
+				"/assets/desktop-banner/d00.webp",
+				"/assets/desktop-banner/d01.webp",
+				"/assets/desktop-banner/d02.webp",
+				"/assets/desktop-banner/d03.webp",
+				"/assets/desktop-banner/d04.webp",
+				"/assets/desktop-banner/d05.webp",
+				"/assets/desktop-banner/d06.webp",
+				"/assets/desktop-banner/d07.webp",
+				"/assets/desktop-banner/d21.webp",
+				"/assets/desktop-banner/d22.webp",
+				"/assets/desktop-banner/d23.webp",
+				"/assets/desktop-banner/d24.webp",
 			], // 桌面横幅图片
 			mobile: [
+				"/assets/desktop-banner/d00.webp",
+				"/assets/desktop-banner/d01.webp",
+				"/assets/desktop-banner/d02.webp",
+				"/assets/desktop-banner/d03.webp",
+				"/assets/desktop-banner/d04.webp",
+				"/assets/desktop-banner/d05.webp",
 				"/assets/mobile-banner/m1.webp",
 				"/assets/mobile-banner/m2.webp",
 				"/assets/mobile-banner/m3.webp",
@@ -234,16 +244,26 @@ export const siteConfig: SiteConfig = {
 export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	src: {
 		desktop: [
-			"/assets/desktop-banner/d1.webp",
-			"/assets/desktop-banner/d2.webp",
-			"/assets/desktop-banner/d3.webp",
-			"/assets/desktop-banner/d4.webp",
-			"/assets/desktop-banner/d5.webp",
-			"/assets/desktop-banner/d6.webp",
-			"/assets/desktop-banner/d7.webp",
-			"/assets/desktop-banner/d8.webp",
+			"/assets/desktop-banner/d00.webp",
+			"/assets/desktop-banner/d01.webp",
+			"/assets/desktop-banner/d02.webp",
+			"/assets/desktop-banner/d03.webp",
+			"/assets/desktop-banner/d04.webp",
+			"/assets/desktop-banner/d05.webp",
+			"/assets/desktop-banner/d06.webp",
+			"/assets/desktop-banner/d07.webp",
+			"/assets/desktop-banner/d21.webp",
+			"/assets/desktop-banner/d22.webp",
+			"/assets/desktop-banner/d23.webp",
+			"/assets/desktop-banner/d24.webp",
 		], // 桌面横幅图片
 		mobile: [
+			"/assets/desktop-banner/d00.webp",
+			"/assets/desktop-banner/d01.webp",
+			"/assets/desktop-banner/d02.webp",
+			"/assets/desktop-banner/d03.webp",
+			"/assets/desktop-banner/d04.webp",
+			"/assets/desktop-banner/d05.webp",
 			"/assets/mobile-banner/m1.webp",
 			"/assets/mobile-banner/m2.webp",
 			"/assets/mobile-banner/m3.webp",
@@ -576,7 +596,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 
 	// 侧栏组件布局配置
 	components: {
-		left: ["site-stats", "calendar","announcement", "categories"],
+		left: ["announcement", "categories","site-stats", "calendar"],
 		right: [],
 		drawer: ["announcement", "categories"],
 	},
